@@ -1,5 +1,14 @@
 /* stylelint-disable max-line-length */
 
+/* Amazon Ember Display – Prime Air Drone Delivery */
+@font-face {
+  font-family: 'AmazonEmber';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/AmazonEmberDisplay_Rg.woff') format('woff');
+}
+
 /* Project primary font – used by --font-family in styles.css */
 @font-face {
   font-family: montserrat;
