@@ -289,3 +289,27 @@
   background-clip: unset;
   color: var(--color-rust);
 }
+
+/* Prime Air  text-only hero (no image) */
+.hero.no-image {
+  background-color: #131a22;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero.no-image h1 {
+  color: #ffffff;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-container .hero-wrapper:has(.hero.no-image) {
+  max-width: unset;
+  padding: 0;
+}
