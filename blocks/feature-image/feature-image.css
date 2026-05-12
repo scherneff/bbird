@@ -1,0 +1,95 @@
+/* Feature Image Block — full-width blue section with heading + video */
+
+/* Full-width override for wrapper and section */
+.feature-image-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+/* Also target section > div when wrapper class is missing */
+.section:has(.feature-image) {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.section:has(.feature-image) > div {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.feature-image {
+  --block-bg: rgb(6, 120, 255);
+  --block-text: #fffefe;
+
+  background: var(--block-bg);
+  color: var(--block-text);
+  padding: 16px 0 56px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Row 1: logo + heading */
+.feature-image > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 0 1rem;
+}
+
+/* Logo cell — hidden, logo rendered via JS overlay */
+.feature-image > div:first-child > div:first-child {
+  display: none;
+}
+
+/* Heading cell */
+.feature-image > div:first-child > div:last-child {
+  width: 100%;
+}
+
+.feature-image h2 {
+  font-family: var(--heading-font-family, sans-serif);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--block-text);
+  margin: 0;
+  padding: 8px 0 24px;
+}
+
+/* Row 2: video container */
+.feature-image > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.feature-image video {
+  max-width: 640px;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  background: #000;
+}
+
+/* Logo overlay positioned top-left */
+.feature-image .feature-image-logo {
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  width: 100px;
+  height: auto;
+}
+
+@media (min-width: 900px) {
+  .feature-image h2 {
+    font-size: 2rem;
+  }
+
+  .feature-image video {
+    max-width: 640px;
+    height: 350px;
+    object-fit: contain;
+  }
+}
