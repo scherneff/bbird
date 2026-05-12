@@ -154,3 +154,52 @@ main :is(a, button, input, select, textarea, [tabindex]):focus-visible {
   outline-offset: 3px;
   border-radius: 2px;
 }
+
+/* ==========================================================================
+  Prime Air page – section variants
+  ========================================================================== */
+
+main > .section.prime-air-hero {
+  background-color: #131a22;
+  padding: 0;
+}
+
+main > .section.prime-air-hero h1 {
+  color: #fff;
+  font-family: var(--font-family);
+  font-weight: 800;
+  text-align: center;
+}
+
+main > .section.prime-air-blue {
+  background-color: #0678ff;
+  padding-block: var(--space-2xl);
+  text-align: center;
+}
+
+main > .section.prime-air-blue h2 {
+  color: #fff;
+  font-family: var(--font-family);
+}
+
+main > .section.prime-air-blue .embed-wrapper {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+/* Prime Air CTA button – Amazon orange */
+main > .section .button-container a.button {
+  background-color: #f26222;
+  border-color: #f26222;
+  color: #fff;
+  border-radius: 24px;
+  padding: 12px 32px;
+  font-weight: 600;
+  font-size: var(--body-font-size-l);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+main > .section .button-container a.button:hover {
+  background-color: #d4511a;
+  transform: translateY(-1px);
+}
