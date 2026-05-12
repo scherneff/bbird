@@ -1,0 +1,64 @@
+/* Footer Services / More on Amazon Grid */
+.footer-services {
+  --svc-bg: #131a22;
+  --svc-title-color: #fff;
+  --svc-desc-color: #999;
+  --svc-border-color: #3a4553;
+  --svc-hover-color: #fff;
+
+  background: var(--svc-bg);
+  border-top: 1px solid var(--svc-border-color);
+  padding: 24px 50px 30px;
+}
+
+/* Each row: grid of 7 columns */
+.footer-services > div {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 899px) {
+  .footer-services > div {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 599px) {
+  .footer-services > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Each cell is a service item */
+.footer-services > div > div {
+  padding: 10px 16px 10px 0;
+  border-right: 1px solid var(--svc-border-color);
+}
+
+.footer-services > div > div:last-child {
+  border-right: none;
+}
+
+.footer-services > div > div a {
+  text-decoration: none !important;
+  color: var(--svc-desc-color) !important;
+  font-size: 12px;
+  line-height: 1.4;
+  display: block;
+}
+
+.footer-services > div > div a:hover {
+  text-decoration: underline !important;
+  color: var(--svc-hover-color) !important;
+}
+
+.footer-services > div > div a strong {
+  display: block;
+  color: var(--svc-title-color);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+footer-services.css
